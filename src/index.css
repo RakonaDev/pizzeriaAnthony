@@ -1,0 +1,11 @@
+
+/* NO BORRAR ES CONFIGURACIÓN TAILWIND */
+/* Si te marca error ignora así funciona */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* SOLUCION TAILWIND VISUAL STUDIO CODE */
+/*
+  Instala la extensión PostCSS Language Support en VSCode
+*/
