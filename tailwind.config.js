@@ -11,7 +11,8 @@ export default {
         'rosa-claro': '#F2133C',
         'amarillo': '#F2B705',
         'rojo-oscuro': '#400101',
-        'medio-blanco': '#F2F2F2'
+        'medio-blanco': '#F2F2F2',
+        'rojo-claro-oscuro' : '#F21326'
       }
     },
   },

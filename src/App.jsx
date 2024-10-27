@@ -7,6 +7,7 @@ import { Nosotros } from './routes/Nosotros/Nosotros'
 import { Pedidos } from './routes/Pedidos/Pedidos'
 import { Menu } from './routes/Menu/Menu'
 import InicioSesion from './routes/InicioSesion/InicioSesion'
+import { Footer } from './components/Footer/Footer'
 
 function App() {
 
@@ -21,6 +22,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/inicio-sesion" element={<InicioSesion />} />
       </Routes>
+      
+      <Footer></Footer>
     </>
   )
 }

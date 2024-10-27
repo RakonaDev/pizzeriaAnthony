@@ -9,6 +9,11 @@ Proyecto de React empaquetado con Vite sobre la pizzeria Anthony para darle solu
 - Tailwind
 - PHP
 
+## Requisitos
+
+- [Node.js](https://nodejs.org/en)
+- [NPM](https://nodejs.org/en)
+
 ## Como trabajar con el proyecto ( Revisar como esta estructurado el proyecto )
 
 - Respetar las carpetas ROUTES y COMPONENTES
@@ -32,7 +37,7 @@ npm install
 npm run dev # Usar este comando para iniciar el proyecto en modo desarrollo
 ```
 
-## Como añadir cambioss con GITHUB
+## Como añadir cambios con GITHUB
 
 Ejecutar el siguiente comando en la terminar de VSCode:
 ```bash

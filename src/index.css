@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 /* NO BORRAR ES CONFIGURACIÓN TAILWIND */
 /* Si te marca error ignora así funciona */
@@ -9,3 +10,7 @@
 /*
   Instala la extensión PostCSS Language Support en VSCode
 */
+
+*{
+  font-family: 'Josefin Sans', sans-serif;
+}
