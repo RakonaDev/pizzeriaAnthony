@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import "./Nosotros.css";
 
 import Proposito from "../../assets/Nosotros/proposito.svg";
@@ -72,14 +72,4 @@ export function Nosotros() {
     </>
   );
 }
-=======
-export function Nosotros() {
-  return (
-    <>
-      <div className='w-full h-screen relative'>
-        Nosotros
-      </div>
-    </>
-  )
-}
->>>>>>> ab2b3a1fec1ee01100d24738f3adc9af410137ee
+

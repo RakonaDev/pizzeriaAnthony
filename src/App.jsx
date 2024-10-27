@@ -7,10 +7,7 @@ import { Nosotros } from './routes/Nosotros/Nosotros'
 import { Pedidos } from './routes/Pedidos/Pedidos'
 import { Menu } from './routes/Menu/Menu'
 import InicioSesion from './routes/InicioSesion/InicioSesion'
-<<<<<<< HEAD
 import { Footer } from './components/Footer/Footer'
-=======
->>>>>>> ab2b3a1fec1ee01100d24738f3adc9af410137ee
 
 function App() {
 
@@ -25,11 +22,8 @@ function App() {
         <Route path="/menu" element={<Menu />} />
         <Route path="/inicio-sesion" element={<InicioSesion />} />
       </Routes>
-<<<<<<< HEAD
       
       <Footer></Footer>
-=======
->>>>>>> ab2b3a1fec1ee01100d24738f3adc9af410137ee
     </>
   )
 }
