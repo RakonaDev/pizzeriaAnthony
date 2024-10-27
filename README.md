@@ -37,11 +37,7 @@ npm install
 npm run dev # Usar este comando para iniciar el proyecto en modo desarrollo
 ```
 
-<<<<<<< HEAD
 ## Como añadir cambios con GITHUB
-=======
-## Como añadir cambioss con GITHUB
->>>>>>> ab2b3a1fec1ee01100d24738f3adc9af410137ee
 
 Ejecutar el siguiente comando en la terminar de VSCode:
 ```bash
