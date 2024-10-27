@@ -13,6 +13,7 @@ Proyecto de React empaquetado con Vite sobre la pizzeria Anthony para darle solu
 
 - [Node.js](https://nodejs.org/en)
 - [NPM](https://nodejs.org/en)
+- [Git](https://git-scm.com/downloads/win)
 
 ## Como trabajar con el proyecto ( Revisar como esta estructurado el proyecto )
 
