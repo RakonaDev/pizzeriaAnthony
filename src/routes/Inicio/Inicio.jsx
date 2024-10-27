@@ -1,4 +1,5 @@
 import inicioBackground from '../../assets/Inicio/inicioBackground.jpg'
+import './Inicio.css'
 
 export function Inicio() {
   return (

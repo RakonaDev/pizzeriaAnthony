@@ -2,6 +2,8 @@ import './InicioSesion.css'
 
 export default function InicioSesion() {
   return (
-    <div>InicioSesion</div>
+    <>
+      <div className='w-full h-screen relative'> </div>
+    </>
   )
 }

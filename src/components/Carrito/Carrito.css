@@ -1,0 +1,11 @@
+.carrito-container{
+  transition: all 0.6s ease;
+}
+
+.carrito-container.mostrar{
+  opacity: 1;
+}
+
+.carrito-container.borrar{
+  opacity: 0;
+}

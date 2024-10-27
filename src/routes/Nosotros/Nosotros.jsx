@@ -1,15 +1,25 @@
-
 import "./Nosotros.css";
 
 import Proposito from "../../assets/Nosotros/proposito.svg";
 import Vision from "../../assets/Nosotros/vision.svg";
 import Mision from "../../assets/Nosotros/mision.svg";
+import NosotrosBackground from "../../assets/Nosotros/nosotros.jpeg";
 
 export function Nosotros() {
   return (
     <>
       <div className="w-full h-16 bg-rojo-claro"></div>
-      <div className="w-full h-auto bg-medio-blanco relative">
+      <div className="w-full h-auto bg-medio-blanco">
+        <div className="relative w-full h-screen">
+          <img
+            src={NosotrosBackground}
+            alt="background"
+            className="w-full h-screen object-cover absolute top-0"
+          />
+          <div className="w-full bg-opacity-30 bg-black h-screen text-medio-blanco z-20 text-5xl relative flex items-center max-sm:justify-center">
+            <h1 className="z-20 ps-16 font-bold max-sm:ps-0">Nosotros</h1>
+          </div>
+        </div>
         <div className="container max-w-7xl mx-auto ps-2 pe-2">
           <h1 className="text-3xl font-bold text-rojo-claro-oscuro pt-9 text-center md:text-start">
             Propósito
@@ -72,4 +82,3 @@ export function Nosotros() {
     </>
   );
 }
-
