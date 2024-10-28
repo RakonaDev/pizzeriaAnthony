@@ -1,31 +1,31 @@
-import "./Nosotros.css";
+import './Nosotros.css'
 
-import Proposito from "../../assets/Nosotros/proposito.svg";
-import Vision from "../../assets/Nosotros/vision.svg";
-import Mision from "../../assets/Nosotros/mision.svg";
-import NosotrosBackground from "../../assets/Nosotros/nosotros.jpeg";
+import Proposito from '../../assets/Nosotros/proposito.svg'
+import Vision from '../../assets/Nosotros/vision.svg'
+import Mision from '../../assets/Nosotros/mision.svg'
+import NosotrosBackground from '../../assets/Nosotros/nosotros.jpeg'
 
-export function Nosotros() {
+export function Nosotros () {
   return (
     <>
-      <div className="w-full h-16 bg-rojo-claro"></div>
-      <div className="w-full h-auto bg-medio-blanco">
-        <div className="relative w-full h-screen">
+      <div className='w-full h-16 bg-rojo-claro' />
+      <div className='w-full h-auto bg-medio-blanco'>
+        <div className='relative w-full h-screen'>
           <img
             src={NosotrosBackground}
-            alt="background"
-            className="w-full h-screen object-cover absolute top-0"
+            alt='background'
+            className='w-full h-screen object-cover absolute top-0'
           />
-          <div className="w-full bg-opacity-30 bg-black h-screen text-medio-blanco z-20 text-5xl relative flex items-center max-sm:justify-center">
-            <h1 className="z-20 ps-16 font-bold max-sm:ps-0">Nosotros</h1>
+          <div className='w-full bg-opacity-30 bg-black h-screen text-medio-blanco z-20 text-5xl relative flex items-center max-sm:justify-center'>
+            <h1 className='z-20 ps-16 font-bold max-sm:ps-0'>Nosotros</h1>
           </div>
         </div>
-        <div className="container max-w-7xl mx-auto ps-2 pe-2">
-          <h1 className="text-3xl font-bold text-rojo-claro-oscuro pt-9 text-center md:text-start">
+        <div className='container max-w-7xl mx-auto ps-2 pe-2'>
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-9 text-center md:text-start'>
             Propósito
           </h1>
-          <div className="w-full flex flex-wrap ">
-            <p className="text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]">
+          <div className='w-full flex flex-wrap '>
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
               El propósito de Anthonys Pizza es llevar a cada cliente una
               experiencia auténtica y memorable de la pizza italiana, ofreciendo
               no solo un plato delicioso sino también un espacio donde se
@@ -37,18 +37,18 @@ export function Nosotros() {
             </p>
             <img
               src={Proposito}
-              alt="Proposito"
-              className="w-[100%] md:w-[35%]"
+              alt='Proposito'
+              className='w-[100%] md:w-[35%]'
             />
           </div>
-          <h1 className="text-3xl font-bold text-rojo-claro-oscuro pt-3 text-center md:text-start">
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-3 text-center md:text-start'>
             Visión
           </h1>
-          <div className="w-full flex flex-wrap-reverse s:flex-wrap">
-            <img src={Vision} alt="Proposito" className="w-[100%] md:w-[35%]" />
-            <p className="text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]">
+          <div className='w-full flex flex-wrap-reverse s:flex-wrap'>
+            <img src={Vision} alt='Proposito' className='w-[100%] md:w-[35%]' />
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
               Nuestra visión es convertirnos en el lugar de referencia para los
-              amantes de la pizza auténtica en la ciudad, reconocidos no solo
+              amantes de la pizza auténtica en la ciudad,reconocidos no solo
               por la calidad y autenticidad de nuestras pizzas, sino también por
               nuestro compromiso constante con la innovación y la excelencia en
               el servicio. Aspiramos a expandirnos y ser un punto de encuentro
@@ -59,12 +59,12 @@ export function Nosotros() {
               historia culinaria.
             </p>
           </div>
-          <h1 className="text-3xl font-bold text-rojo-claro-oscuro text-center md:text-start">
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro text-center md:text-start'>
             Misión
           </h1>
-          <div className="w-full flex flex-wrap">
-            <p className="text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]">
-              En Anthonys Pizza, nuestra misión es transformar una comida en un
+          <div className='w-full flex flex-wrap'>
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
+              En Anthonys Pizza, nuestra misión es transfomar una comida en un
               momento especial para cada cliente. Nos dedicamos a ofrecer pizzas
               de alta calidad, utilizando siempre los ingredientes más frescos y
               métodos tradicionales que nos permiten capturar el sabor auténtico
@@ -75,10 +75,10 @@ export function Nosotros() {
               clientes a regresar para disfrutar de una comida auténtica y
               compartir momentos significativos en nuestra pizzería.
             </p>
-            <img src={Mision} alt="Proposito" className="w-[100%] md:w-[35%]" />
+            <img src={Mision} alt='Proposito' className='w-[100%] md:w-[35%]' />
           </div>
         </div>
       </div>
     </>
-  );
+  )
 }

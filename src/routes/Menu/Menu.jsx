@@ -1,8 +1,7 @@
 import './Menu.css'
 
-export function Menu() {
+export function Menu () {
   return (
     <div>Menu</div>
   )
 }
-

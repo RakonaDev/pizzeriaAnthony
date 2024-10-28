@@ -12,35 +12,32 @@ import { useEffect, useState } from 'react'
 import { Carrito } from './components/Carrito/Carrito'
 import { PanelCarrito } from './routes/PanelCarrito/PanelCarrito'
 
-function App() {
-
-  const[esSesion , setEsSesion] = useState(false)
+function App () {
+  const [esSesion, setEsSesion] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
-    
-    if(location.pathname == "/inicio-sesion"){
-      console.log("sesion")
+    if (location.pathname === '/inicio-sesion') {
+      console.log('sesion')
       setEsSesion(true)
-    }else{
+    } else {
       setEsSesion(false)
     }
-  },[location])
+  }, [location])
 
   return (
     <>
-      {esSesion ? <></> : <Header></Header>}
-      <Carrito></Carrito>
+      {esSesion ? <></> : <Header />}
+      <Carrito />
       <Routes>
-        <Route path="/" element={<Inicio />} />
-        <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/pedidos" element={<Pedidos />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path='/carrito' element={<PanelCarrito/>}/>
-        <Route path="/inicio-sesion" element={<InicioSesion />} />
+        <Route path='/' element={<Inicio />} />
+        <Route path='/nosotros' element={<Nosotros />} />
+        <Route path='/pedidos' element={<Pedidos />} />
+        <Route path='/menu' element={<Menu />} />
+        <Route path='/carrito' element={<PanelCarrito />} />
+        <Route path='/inicio-sesion' element={<InicioSesion />} />
       </Routes>
-      
-      <Footer></Footer>
+      <Footer />
     </>
   )
 }

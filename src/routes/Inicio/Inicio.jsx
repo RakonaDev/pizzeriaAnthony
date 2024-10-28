@@ -1,16 +1,16 @@
 import inicioBackground from '../../assets/Inicio/inicioBackground.jpg'
+import inicio from '../../assets/Inicio/inicio.jpg'
 import './Inicio.css'
 
-export function Inicio() {
+export function Inicio () {
   return (
     <>
       <div className='w-full h-screen relative'>
-        <img src={inicioBackground} alt="banner" className='w-full h-screen object-cover' />
+        <img src={inicio} alt='banner' className='w-full h-screen object-cover absolute top-0 left-0' />
       </div>
-      <div className='w-full '>
-        Inicio
-      </div>
+      <main className='w-full h-auto'>
+        Putitos
+      </main>
     </>
   )
 }
-
