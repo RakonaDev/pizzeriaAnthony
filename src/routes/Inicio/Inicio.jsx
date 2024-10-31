@@ -1,4 +1,4 @@
-import inicioBackground from '../../assets/Inicio/inicioBackground.jpg'
+
 import inicio from '../../assets/Inicio/inicio.jpg'
 import './Inicio.css'
 

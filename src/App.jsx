@@ -28,7 +28,7 @@ function App () {
   return (
     <>
       {esSesion ? <></> : <Header />}
-      <Carrito />
+      {esSesion ? <></> : <Carrito />}
       <Routes>
         <Route path='/' element={<Inicio />} />
         <Route path='/nosotros' element={<Nosotros />} />

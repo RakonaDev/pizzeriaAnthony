@@ -12,7 +12,8 @@ export default {
         'amarillo': '#F2B705',
         'rojo-oscuro': '#400101',
         'medio-blanco': '#F2F2F2',
-        'rojo-claro-oscuro' : '#F21326'
+        'rojo-claro-oscuro' : '#F21326',
+        'rojo-claro-max': '#FEC8C8'
       }
     },
   },
