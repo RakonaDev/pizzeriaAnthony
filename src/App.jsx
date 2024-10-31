@@ -18,7 +18,6 @@ function App () {
 
   useEffect(() => {
     if (location.pathname === '/inicio-sesion') {
-      console.log('sesion')
       setEsSesion(true)
     } else {
       setEsSesion(false)

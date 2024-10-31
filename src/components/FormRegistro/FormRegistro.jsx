@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import { useRef, useState } from 'react'
+import { registro } from '../../services/Usuarios'
 
 export function FormRegistro ({ setEsInicio }) {
   const [mostrarContrasena, setMostrarContrasena] = useState(false)
   const ref = useRef()
+  const refForm = useRef()
 
   const cambiarEstado = () => {
     setEsInicio(true)
@@ -14,12 +16,14 @@ export function FormRegistro ({ setEsInicio }) {
     setMostrarContrasena(!mostrarContrasena)
   }
 
+  console.log(refForm.current)
+
   return (
     <>
       <form
-        action='#'
         className='w-full h-full flex flex-col justify-center items-center'
-        method='post'
+        ref={refForm}
+        onSubmit={registro}
       >
         <h1 className='text-center text-3xl'>Registrate</h1>
         <div className='mb-3 flex flex-col mt-6 w-full px-16'>
@@ -56,20 +60,24 @@ export function FormRegistro ({ setEsInicio }) {
             <i className='fa-solid fa-eye' />
           </div>
         </div>
-        <div className='mb-8 flex flex-col w-full px-16'>
-          <label htmlFor='contrasena'>Confirma Contraseña: </label>
+        <div className='mb-8 flex flex-col w-full px-16 relative'>
+          <label htmlFor='contrasena-confirmar'>Confirma Contraseña: </label>
           <input
             type='password'
-            name='contrasena'
-            id='contrasena'
+            name='contrasena-confirmar'
+            id='contrasena-confirmar'
             className='border-2 border-black p-1 rounded-2xl focus-visible:border-white'
             required
           />
+          <div htmlFor='contrasena' className='absolute top-8 right-20' onClick={mostrar}>
+            <i className='fa-solid fa-eye' />
+          </div>
         </div>
         <input
           type='submit'
           value='Registrar'
           className='mx-auto py-2 px-10 rounded-lg bg-rojo-claro text-white cursor-pointer transition-colors duration-500 hover:bg-rojo-claro-oscuro'
+          onSubmit={registro}
         />
         <p className='mt-4'>Ya tienes cuenta?</p>
         <button

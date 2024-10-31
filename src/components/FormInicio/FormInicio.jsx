@@ -1,8 +1,16 @@
 import PropTypes from 'prop-types'
+import { useRef, useState } from 'react'
 
 export function FormInicio ({ setEsInicio }) {
   const cambiarEstado = () => {
     setEsInicio(false)
+  }
+  const ref = useRef()
+  const [mostrarContrasena, setMostrarContrasena] = useState(false)
+
+  const mostrar = () => {
+    ref.current.focus()
+    setMostrarContrasena(!mostrarContrasena)
   }
 
   return (
@@ -23,15 +31,19 @@ export function FormInicio ({ setEsInicio }) {
             required
           />
         </div>
-        <div className='mb-8 flex flex-col w-full px-16'>
+        <div className='mb-8 flex flex-col w-full px-16 relative'>
           <label htmlFor='contrasena'>Contraseña: </label>
           <input
-            type='password'
+            ref={ref}
+            type={mostrarContrasena ? 'text' : 'password'}
             name='contrasena'
             id='contrasena'
             className='border-2 border-black p-1 rounded-2xl focus-visible:border-white'
             required
           />
+          <div htmlFor='contrasena' className='absolute top-8 right-20' onClick={mostrar}>
+            <i className='fa-solid fa-eye' />
+          </div>
         </div>
         <input
           type='submit'
