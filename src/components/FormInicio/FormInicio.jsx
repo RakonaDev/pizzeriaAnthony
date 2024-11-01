@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import { useRef, useState } from 'react'
+import { login } from '../../services/Usuarios'
 
 export function FormInicio ({ setEsInicio }) {
   const cambiarEstado = () => {
@@ -16,9 +17,8 @@ export function FormInicio ({ setEsInicio }) {
   return (
     <>
       <form
-        action='#'
         className='w-full h-full flex flex-col justify-center items-center'
-        method='post'
+        onSubmit={login}
       >
         <h1 className='text-center text-3xl'>Inicia Sesión</h1>
         <div className='mb-3 flex flex-col mt-6 w-full px-16'>
@@ -49,6 +49,7 @@ export function FormInicio ({ setEsInicio }) {
           type='submit'
           value='Iniciar'
           className='mx-auto py-2 px-10 rounded-lg bg-rojo-claro text-white cursor-pointer transition-colors duration-500 hover:bg-rojo-claro-oscuro'
+          onSubmit={login}
         />
         <p className='mt-4'>No tienes cuenta? Registrate</p>
         <button

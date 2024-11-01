@@ -4,6 +4,7 @@ import { registro } from '../../services/Usuarios'
 
 export function FormRegistro ({ setEsInicio }) {
   const [mostrarContrasena, setMostrarContrasena] = useState(false)
+  const [mostrarConfirmar, setMostrarConfirmar] = useState(false)
   const ref = useRef()
   const refForm = useRef()
 
@@ -16,13 +17,15 @@ export function FormRegistro ({ setEsInicio }) {
     setMostrarContrasena(!mostrarContrasena)
   }
 
-  console.log(refForm.current)
+  const mostrarConfirm = () => {
+    refForm.current.focus()
+    setMostrarConfirmar(!mostrarConfirmar)
+  }
 
   return (
     <>
       <form
         className='w-full h-full flex flex-col justify-center items-center'
-        ref={refForm}
         onSubmit={registro}
       >
         <h1 className='text-center text-3xl'>Registrate</h1>
@@ -63,13 +66,14 @@ export function FormRegistro ({ setEsInicio }) {
         <div className='mb-8 flex flex-col w-full px-16 relative'>
           <label htmlFor='contrasena-confirmar'>Confirma Contraseña: </label>
           <input
-            type='password'
+            ref={refForm}
+            type={mostrarConfirmar ? 'text' : 'password'}
             name='contrasena-confirmar'
             id='contrasena-confirmar'
             className='border-2 border-black p-1 rounded-2xl focus-visible:border-white'
             required
           />
-          <div htmlFor='contrasena' className='absolute top-8 right-20' onClick={mostrar}>
+          <div htmlFor='contrasena' className='absolute top-8 right-20' onClick={mostrarConfirm}>
             <i className='fa-solid fa-eye' />
           </div>
         </div>
