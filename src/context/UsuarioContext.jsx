@@ -1,7 +1,8 @@
 import { useEffect, useState, createContext } from 'react'
 import { useFetch } from '../hooks/useFetch'
+import PropTypes from 'prop-types';
 
-export const UsuarioContext = createContext()
+export const UsuarioContext = createContext();
 
 export function UsuarioProvider ({ children }) {
   const [usuario, setUsuario] = useState([])
@@ -23,4 +24,8 @@ export function UsuarioProvider ({ children }) {
       {children}
     </UsuarioContext.Provider>
   )
+}
+
+UsuarioProvider.propTypes = {
+  children: PropTypes.node.isRequired
 }

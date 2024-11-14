@@ -5,7 +5,7 @@ export function login(event) {
     email: document.getElementById('usuario').value,
     password: document.getElementById('contrasena').value
   }
-  fetch('http://127.0.0.1:8000/api/login', {
+  fetch(import.meta.env.VITE_API_URL + 'login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -15,7 +15,11 @@ export function login(event) {
     .then((response) => response.json())
     .then((data) => {
       sessionStorage.setItem('token', data.token)
-      location.pathname = '/'
+      if (data.user.role === 'admin') {
+        location.pathname = '/admin'
+      } else {
+        location.pathname = '/'
+      }
     })
     .catch(() => {
       alert('Usuario o contraseña incorrectos')
@@ -33,7 +37,7 @@ export function registro (event) {
 
   console.log(parametros)
 
-  fetch('http://127.0.0.1:8000/api/register', {
+  fetch(import.meta.env.VITE_API_URL + 'register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

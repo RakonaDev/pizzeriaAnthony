@@ -1,3 +1,5 @@
+<p align="center"><a href="https://es.react.dev/" target="_blank"><img src="https://img.hotimg.com/react-removebg-preview.png" width="400" alt="React"></a></p>
+
 # PROYECTO CON REACT Y PHP
 
 Proyecto de React empaquetado con Vite sobre la pizzeria Anthony para darle solución a la necesidad de un sitio web para la gestión de pedidos y la administración de clientes.

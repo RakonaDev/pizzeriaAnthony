@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react'
 
-export function useFetch (url, method, token) {
+export function useFetch (url, method, token, body = "") {
   const [response, setResponse] = useState([])
   const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch(url, {
+    fetch(import.meta.env.VITE_API_URL + url, {
       method,
       headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token
-      }
+      },
+      body: JSON.stringify(body)
     })
       .then((response) => {
         if (response.status === 401) {
@@ -26,7 +27,7 @@ export function useFetch (url, method, token) {
         setError(true)
         sessionStorage.removeItem('token')
       })
-  }, [url, method, token])
+  }, [url, method, token, body])
 
   return [response, error]
 }

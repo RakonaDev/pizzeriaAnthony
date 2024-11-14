@@ -11,13 +11,14 @@ import { Footer } from './components/Footer/Footer'
 import { useEffect, useState } from 'react'
 import { Carrito } from './components/Carrito/Carrito'
 import { PanelCarrito } from './routes/PanelCarrito/PanelCarrito'
+import { Admin } from './routes/Admin/Admin'
 
-function App () {
+export function App () {
   const [esSesion, setEsSesion] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
-    if (location.pathname === '/inicio-sesion') {
+    if (location.pathname === '/inicio-sesion' || location.pathname === '/admin') {
       setEsSesion(true)
     } else {
       setEsSesion(false)
@@ -35,6 +36,8 @@ function App () {
         <Route path='/menu' element={<Menu />} />
         <Route path='/carrito' element={<PanelCarrito />} />
         <Route path='/inicio-sesion' element={<InicioSesion />} />
+        <Route path='/admin' element={<Admin />} />
+        <Route path='*' element={<h1>404</h1>} />
       </Routes>
       <Footer />
     </>
