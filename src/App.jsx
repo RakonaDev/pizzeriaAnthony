@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react'
 import { Carrito } from './components/Carrito/Carrito'
 import { PanelCarrito } from './routes/PanelCarrito/PanelCarrito'
 import { Admin } from './routes/Admin/Admin'
+import AdminDashboard from './routes/Admin/AdminDashboard'
 
 export function App () {
   const [esSesion, setEsSesion] = useState(false)
@@ -37,6 +38,7 @@ export function App () {
         <Route path='/carrito' element={<PanelCarrito />} />
         <Route path='/inicio-sesion' element={<InicioSesion />} />
         <Route path='/admin' element={<Admin />} />
+        <Route path='/admin/dashboard' element={<AdminDashboard />} />
         <Route path='*' element={<h1>404</h1>} />
       </Routes>
       <Footer />

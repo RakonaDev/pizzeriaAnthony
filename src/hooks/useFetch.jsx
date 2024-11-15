@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function useFetch (url, method, token, body = "") {
+export function useFetch (url, method = "GET", token = "", body = "") {
   const [response, setResponse] = useState([])
   const [error, setError] = useState(false)
 
@@ -9,7 +9,7 @@ export function useFetch (url, method, token, body = "") {
       method,
       headers: {
         'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + token
+        'Authorization': 'Bearer ' + token
       },
       body: JSON.stringify(body)
     })
