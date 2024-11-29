@@ -12,5 +12,21 @@
 */
 
 *{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
+
+
+.css-1l5xnma-MuiPaper-root-MuiAccordion-root::before {
+  height: 0px !important;
+}
+
+
+
+/*
+.css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root {
+  color: white !important;
+}
+.css-113d811-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: white !important;
+}
+  */

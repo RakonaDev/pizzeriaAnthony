@@ -1,7 +1,5 @@
-export function login ({ event, setFormError }) {
+export function login ({event, setFormError, navigate }) {
   event.preventDefault()
-  var error = false
-
   const parametros = {
     email: document.getElementById('usuario').value,
     password: document.getElementById('contrasena').value
@@ -20,16 +18,13 @@ export function login ({ event, setFormError }) {
         setFormError(true)
       }
       else {
+        navigate('/admin/dashboard')
         sessionStorage.setItem('token', data.token)
-        location.pathname = '/admin/dashboard'
       }
     })
     .catch(err => {
-      console.log(err)
+      console.error(err)
       setFormError(true)
     })
   
-  return { error }
 }
-
-export default login

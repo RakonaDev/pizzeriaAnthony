@@ -4,8 +4,15 @@ import Proposito from '../../assets/Nosotros/proposito.svg'
 import Vision from '../../assets/Nosotros/vision.svg'
 import Mision from '../../assets/Nosotros/mision.svg'
 import NosotrosBackground from '../../assets/Nosotros/nosotros.jpeg'
+import Aos from 'aos'
 
 export function Nosotros () {
+
+  Aos.init({
+    duration: 800,
+    offset: 100,
+  })
+
   return (
     <>
       <div className='w-full h-16 bg-rojo-claro' />
@@ -21,11 +28,11 @@ export function Nosotros () {
           </div>
         </div>
         <div className='container max-w-7xl mx-auto ps-2 pe-2'>
-          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-9 text-center md:text-start'>
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-9 text-center md:text-start' data-aos='fade-up'>
             Propósito
           </h1>
           <div className='w-full flex flex-wrap '>
-            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]' data-aos='fade-right'>
               El propósito de Anthonys Pizza es llevar a cada cliente una
               experiencia auténtica y memorable de la pizza italiana, ofreciendo
               no solo un plato delicioso sino también un espacio donde se
@@ -41,12 +48,12 @@ export function Nosotros () {
               className='w-[100%] md:w-[35%]'
             />
           </div>
-          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-3 text-center md:text-start'>
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro pt-3 text-center md:text-start' data-aos='fade-up'> 
             Visión
           </h1>
           <div className='w-full flex flex-wrap-reverse s:flex-wrap'>
             <img src={Vision} alt='Proposito' className='w-[100%] md:w-[35%]' />
-            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]' data-aos='fade-left'>
               Nuestra visión es convertirnos en el lugar de referencia para los
               amantes de la pizza auténtica en la ciudad,reconocidos no solo
               por la calidad y autenticidad de nuestras pizzas, sino también por
@@ -59,11 +66,11 @@ export function Nosotros () {
               historia culinaria.
             </p>
           </div>
-          <h1 className='text-3xl font-bold text-rojo-claro-oscuro text-center md:text-start'>
+          <h1 className='text-3xl font-bold text-rojo-claro-oscuro text-center md:text-start' data-aos='fade-up'>
             Misión
           </h1>
           <div className='w-full flex flex-wrap'>
-            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]'>
+            <p className='text-base pt-5 my-auto w-[100%] text-justify md:w-[65%]' data-aos='fade-right'>
               En Anthonys Pizza, nuestra misión es transfomar una comida en un
               momento especial para cada cliente. Nos dedicamos a ofrecer pizzas
               de alta calidad, utilizando siempre los ingredientes más frescos y

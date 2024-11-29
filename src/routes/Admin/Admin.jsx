@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { login } from "../../services/Admin";
+import { useNavigate } from "react-router-dom";
 
 export function Admin() {
   const [mostrarContrasena, setMostrarContrasena] = useState(false);
@@ -7,13 +8,14 @@ export function Admin() {
 
   const ref = useRef();
 
+  const navigate = useNavigate()
+
   const mostrar = () => {
     setMostrarContrasena(!mostrarContrasena);
   };
 
   const submitLogin = (event) => {
-    event.preventDefault();
-    login({ event, setFormError });
+    login({ event, setFormError, navigate });
   };
 
   useEffect(() => {

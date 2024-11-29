@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import './Carrito.css'
+import { Shop } from '@mui/icons-material'
 
 export function Carrito () {
   return (
@@ -8,7 +9,7 @@ export function Carrito () {
         className='w-14 h-14 bg-rojo-claro-oscuro rounded-full flex justify-center items-center cursor-pointer'
         to='/carrito'
       >
-        <i className='fa-solid fa-cart-shopping text-xl text-white' />
+        <Shop className='text-white' />
       </NavLink>
     </div>
   )

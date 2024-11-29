@@ -5,6 +5,7 @@ export function useFetch (url, method = "GET", token = "", body = "") {
   const [error, setError] = useState(false)
 
   useEffect(() => {
+    console.log("Haciendo fetch")
     fetch(import.meta.env.VITE_API_URL + url, {
       method,
       headers: {

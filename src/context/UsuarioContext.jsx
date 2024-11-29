@@ -1,4 +1,4 @@
-import { useEffect, useState, createContext } from 'react'
+import { useEffect, useState, createContext, useCallback } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import PropTypes from 'prop-types';
 
@@ -7,9 +7,8 @@ export const UsuarioContext = createContext();
 export function UsuarioProvider ({ children }) {
   const [usuario, setUsuario] = useState([])
   const [usuarioLogeado, setUsuarioLogeado] = useState(false)
-
-  const [response, error] = useFetch('http://127.0.0.1:8000/api/me', 'GET', sessionStorage.getItem('token'))
-
+  const [response, error] = useFetch(import.meta.env.VITE_API_URL + 'me', 'GET', localStorage.getItem('token'))
+  /*
   useEffect(() => {
     if (!error) {
       setUsuarioLogeado(true)
@@ -17,7 +16,14 @@ export function UsuarioProvider ({ children }) {
     } else {
       setUsuarioLogeado(false)
     }
+    console.log(error)
   }, [response, error])
+  */
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      setUsuarioLogeado(true)
+    }
+  }, [localStorage.getItem('token')])
 
   return (
     <UsuarioContext.Provider value={{ usuario, usuarioLogeado }}>

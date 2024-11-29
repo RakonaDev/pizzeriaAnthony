@@ -20,7 +20,6 @@ export function Header () {
           />
         </div>
         <nav className='flex w-[40%] my-auto justify-between'>
-          <NavLink to='/' className='text-white font-bold'>Inicio</NavLink>
           <NavLink to='/menu' className='text-white font-bold'>Menu</NavLink>
           <NavLink to='/nosotros' className='text-white font-bold'>Nosotros</NavLink>
           <NavLink to='/pedidos' className='text-white font-bold'>Pedidos</NavLink>

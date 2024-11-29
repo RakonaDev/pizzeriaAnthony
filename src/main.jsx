@@ -5,6 +5,7 @@ import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { CarritoProvider } from './context/CarritoContext.jsx'
 import { UsuarioProvider } from './context/UsuarioContext.jsx'
+import 'aos/dist/aos.css';
 
 createRoot(document.getElementById('root')).render(
   <UsuarioProvider>
